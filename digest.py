@@ -103,8 +103,12 @@ def send_to_telegram(text):
         "text": text
     }
 
-    requests.post(url, json=payload)
-    
+    response = requests.post(url, json=payload)
+
+    print("Telegram status:", response.status_code)
+    print("Telegram response:", response.text)
+
+    response.raise_for_status()
  
  
 #Main flow
