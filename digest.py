@@ -6,8 +6,8 @@ from datetime import datetime
 # Config
 import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-CHANNEL_ID = os.getenv("CHANNEL_ID")
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 
 # Function to get the RSS feed
 RSS_FEEDS = [
