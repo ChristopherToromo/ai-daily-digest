@@ -112,7 +112,6 @@ def main():
     sent = load_sent()
     all_items = []
 
-    # RSS
     for feed in RSS_FEEDS:
         for item in fetch_rss(feed):
             if item["link"] not in sent:
@@ -120,14 +119,19 @@ def main():
                 all_items.append(item)
                 sent.add(item["link"])
 
-    # arXiv
     for item in fetch_arxiv():
         if item["link"] not in sent:
             item["score"] = score(item["title"])
             all_items.append(item)
             sent.add(item["link"])
 
+    if not all_items:
+        print("No new items found")
+        return
+
     digest = build_digest(all_items)
+
+    print("Digest:\n", digest)
 
     send_to_telegram(digest)
     save_sent(sent)
