@@ -134,6 +134,11 @@ def main():
         return
 
     digest = build_digest(all_items)
+    
+    print("TOTAL ITEMS FOUND:", len(all_items))
+
+    for i, item in enumerate(all_items[:10]):
+        print(i, item["title"])
 
     print("Digest:\n", digest)
 
