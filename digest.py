@@ -93,6 +93,8 @@ def build_digest(items):
 
     return text     
 
+print("BOT_TOKEN:", BOT_TOKEN[:10] + "...")
+print("CHANNEL_ID:", CHANNEL_ID)
 
 #Send to telegram
 def send_to_telegram(text):
@@ -109,6 +111,7 @@ def send_to_telegram(text):
     print("Telegram response:", response.text)
 
     response.raise_for_status()
+        
  
  
 #Main flow
