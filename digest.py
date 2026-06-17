@@ -6,8 +6,8 @@ from datetime import datetime
 # Config
 import os
 
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 
 # Function to get the RSS feed
 RSS_FEEDS = [
@@ -93,15 +93,15 @@ def build_digest(items):
 
     return text     
 
-print("BOT_TOKEN:", BOT_TOKEN[:10] + "...")
-print("CHANNEL_ID:", CHANNEL_ID)
+print("TELEGRAM_BOT_TOKEN:", TELEGRAM_BOT_TOKEN[:10] + "...")
+print("TELEGRAM_CHANNEL_ID:", TELEGRAM_CHANNEL_ID)
 
 #Send to telegram
 def send_to_telegram(text):
-    url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
 
     payload = {
-        "chat_id": CHANNEL_ID,
+        "chat_id": TELEGRAM_CHANNEL_ID,
         "text": text
     }
 
