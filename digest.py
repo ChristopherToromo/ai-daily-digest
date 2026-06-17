@@ -93,8 +93,6 @@ def build_digest(items):
 
     return text     
 
-print("TELEGRAM_BOT_TOKEN:", TELEGRAM_BOT_TOKEN[:10] + "...")
-print("TELEGRAM_CHANNEL_ID:", TELEGRAM_CHANNEL_ID)
 
 #Send to telegram
 def send_to_telegram(text):
