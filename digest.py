@@ -14,6 +14,11 @@ RSS_FEEDS = [
     "https://huggingface.co/blog/feed.xml",
     "https://www.marktechpost.com/feed/",
     "https://towardsdatascience.com/feed",
+    "https://news.ycombinator.com/rss",
+    "https://kdnuggets.com/feed",
+    "https://medium.com/feed/ai-society",
+    "https://www.statology.org/feed",
+    
 ]
 
 ARXIV_URL = "http://export.arxiv.org/rss/cs.LG"
